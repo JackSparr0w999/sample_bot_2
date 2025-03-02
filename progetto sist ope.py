@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov 20 10:44:52 2024
-
-@author: giogi
+@author: JackSparr0w999
 """
 
 #PROGETTO: sistema operativo
@@ -10,7 +8,7 @@ Created on Wed Nov 20 10:44:52 2024
 user1 = "Johnny"
 user2 = "Tessa"
 
-user = input(f"Scegli uno username: \n(1). {user1} \n(2). {user2} \n--> ")
+user = input(f"Choose a username: \n(1). {user1} \n(2). {user2} \n--> ")
 
 if user == "1":
     print(f"Welcome back {user1}")
@@ -151,104 +149,4 @@ elif todo == "4":
         
         
         
-    
-# Codice usato riutilizzabile          
-        
-'''
-# Motore di ricerca
-l = ["Forno Roscioli", "Burger King", "Mille leghe sotto i mari", "Amazon"]
-k = []
-res = len(k)
-i = 1
-
-find = input("Cerca qualcosa qui \n -> ")
-
-for word in l:
-    if find in word:
-        k.append(word)
-
-print(f"Risultati trovati: {res}")
-
-for word in k:
-    print(f"({i}) {word}")
-    i += 1
-    
-openf = input("Open ")
-
-'''
-
-'''
-# Funzione con due cicli while che verificano
-# Se la password è alfa numerica e non ha solo lettere o numeri
-
-
-pswd = "1234"
-
-
-def tot(pswd):
-    confirmation = []
-    while pswd.isdigit() or pswd.isalpha():
-        print("Meglio non usare una password con tutti numeri"
-              " o con tutte lettere")
-        pswd = input("Try again \n--> ")
-    else:
-        print("Is alphanumeric: Yes")
-        confirmation.append("ok1")
-        
-    while len(pswd)<6:
-        print("Try a longer password")
-        pswd = input("Try again \n--> ")
-    else:
-        print("Length: Yes")
-        confirmation.append("ok2")
-        
-    if "ok1" and "ok2" in confirmation:
-        print("Password saved!")
-    
-    return pswd
-
-pswd = tot(pswd)
-
-
-
-# Altro modo interessante
-
-def verifica_password(password):
-    # Controlla se la password è più lunga di 5 caratteri
-    if len(password) <= 5:
-        return "Password must be longer (6 characters or more)"
-    
-    # Verifica se la password è alfanumerica (contiene almeno una lettera e un numero)
-    has_lettera = False
-    has_numero = False
-    
-    for char in password:
-        if char.isalpha():
-            has_lettera = True
-        elif char.isdigit():
-            has_numero = True
-    
-    if has_lettera and has_numero:
-        return "Password saved!"
-    else:
-        return "La password deve contenere almeno una lettera e un numero."
-
-def cambia_password():
-    while True:
-        password = input("Inserisci una nuova password: ")
-        risultato = verifica_password(password)   # Contiene i valori possibili restituiti dalla funzione
-        print(risultato)
-        
-        # Se la password è valida, esci dal ciclo
-        if risultato == "Password saved!":
-            
-            break
-
-# Chiamata alla funzione per cambiare la password
-cambia_password()
-'''
-            
-        
-        
-    
     
